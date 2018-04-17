@@ -1,0 +1,27 @@
+
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Panel heading</div>
+    <div class="panel-body">
+      <p>Text goes here...</p>
+    </div>
+
+    <!-- Table -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Nom</th>
+          <th>Prix</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let p of data'>
+          <td>{{p.code}}</td>
+          <td>{{p.nom}}</td>
+          <td>{{p.prixUnitaire}}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+
