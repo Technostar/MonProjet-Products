@@ -10,18 +10,10 @@ import { ProductsListService } from './services/products-list.service';
 import { HttpClientModule } from '@angular/common/http';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import {RouterModule} from '@angular/router';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { MyRoutingModule } from './myRoutingModule/myrouting.module';
 
 
-const routeTable = [
-  {path: 'welcome', component: WelcomeComponent},
-  {path: 'products', component: ProductsListComponent},
-  {path: 'products/add', component: ProductsListComponent},
-  {path: 'products/:id', component: ProductDetailComponent},
-  {path: '', redirectTo: 'welcome', pathMatch: 'full'},
-  {path: '**', component: NotFoundComponent},
-];
 
 
 
@@ -38,7 +30,7 @@ const routeTable = [
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routeTable),
+    MyRoutingModule
   ],
   providers: [
     ProductsListService
