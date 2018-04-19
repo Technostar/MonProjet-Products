@@ -24,7 +24,7 @@ const routeTable = [
   ],
   exports: [
     RouterModule
-  ]
+  ],
   providers: [],
   bootstrap: []
 })
