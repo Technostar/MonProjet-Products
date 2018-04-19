@@ -17,7 +17,7 @@
       </thead>
       <tbody>
         <tr *ngFor='let p of data'>
-          <td>{{p.code}}</td>
+          <td><a [routerLink] = "['/products', p.code]">{{p.code}}</a></td>
           <td>{{p.nom}}</td>
           <td>{{p.prixUnitaire}}</td>
         </tr>
